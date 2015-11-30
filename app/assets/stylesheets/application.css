@@ -212,15 +212,15 @@ textarea {
       }
       
       .podcasts_banner{
-          background-image: url(../images/subway_banner.jpg);
+          background-image: url(subway_banner.jpg);
       }
       
       .sign_in_banner{
-          background-image: url(../images/swimmer_banner.jpg);
+          background-image: url(swimmer_banner.jpg);
       }
       
        .sign_up_banner{
-          background-image: url(../images/road_banner.png);
+          background-image: url(road_banner.png);
       }
       
       #podcasts{
