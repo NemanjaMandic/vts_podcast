@@ -107,7 +107,7 @@ textarea {
 /* -------------------- HOME PAGE ---------------- */
 
 #background {
-  background-image: url(../images/homepage_background.jpg);
+  background-image: url(homepage_background.jpg);
   height: 100vh;
   background-size: cover;
   background-position: center;
