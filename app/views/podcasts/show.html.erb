@@ -2,27 +2,27 @@
                <div id="show_banner">
                    <div class="wrapper_skinny">
                         <h1><%= @podcast.title %></h1>
-                           <p class="description">Messenger bag meh tacos sartorial ramps, meditation dreamcatcher. Tumblr 
-                           shoreditch occupy blog roof party iPhone small batch messenger bag chartreuse. 
-                           Williamsburg art party migas street art fap, lo-fi keytar DIY selvage viral schlitz leggings 
-                           cold-pressed. Ethical narwhal microdosing craft beer mixtape. Affogato put a bird on it vegan 
-                           try-hard kombucha retro selvage microdosing lomo, +1 art party. Direct trade leggings pork belly 
-                           +1 swag cornhole truffaut microdosing organic. Etsy cronut PBR&B, paleo offal church-key pug.
-
-                            .</p>
-                           <a href="#" class="subscribe_link">iTunes</a>
-                           <a href="#" class="subscribe_link">Stitcher</a>
-                           <a href="#" class="subscribe_link">PodBay</a>
+                           <p class="description"><%= @podcast.description %></p>
+                           <% unless @podcast.itunes.blank? %>
+                               <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+                           <% end %>
+                           <% unless @podcast.stitcher.blank? %>
+                               <a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+                            <% end %>
+                            <% unless @podcast.podbay.blank? %>
+                                <a href="<%= @podcast.podbay %>" class="subscribe_link">PodBay</a>
+                            <% end %>
                    </div><!--END .wrapper_skinny-->
                   
                </div><!--END #show_banner-->
                
                <div id="breadcrumb">
-                   <a href="#">
-                       All Podcasts
+               <%= link_to podcasts_path do %>
+               		 All Podcasts
                        <span>/</span>
                        The Rocketship Podcast
-                   </a>
+               <% end %>
+                 
                </div><!--END #breadcrumb-->
                <div id="episodes">
                    <div class="wrapper_skinny">
