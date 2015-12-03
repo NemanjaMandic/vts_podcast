@@ -35,61 +35,20 @@
                <div id="episodes">
                    <div class="wrapper_skinny">
                        <ul class="cf">
+                         <% @episodes.each do |episode| %>
                            <li class="cf">
                                <div class="episode_thumbnail">
-                                   <a href="episode.html">
+                                   <a href="#">
                                        <img src="images/danuska.jpg" alt="Danuska">
                                    </a>
                                </div><!--END .episode_thumbnail-->
                                <div class="episode_overview">
-                                   <h2><a href="episode.html">How  to Pull off 12 Startups in 12 Months</a></h2>
-                                   <p class="desc">
-                                       Gentrify mustache photo booth, pabst PBR&B viral knausgaard venmo typewriter blog tumblr. 
-                                       Hammock helvetica forage, shabby chic vice gluten-free affogato disrupt wolf. 
-                                       Fashion axe hella fap locavore tilde. Distillery slow-carb you probably haven't heard of them 
-                                       raw denim. Cray skateboard mumblecore tofu. 8-bit flannel ramps retro vice. 
-                                       Twee yr dreamcatcher, flexitarian crucifix chambray intelligentsia.
-
-
-                                   </p>
+                                     <h2><%= link_to episode.title, podcast_episode_path(@podcast, episode) %></h2>
+                                   <p class="desc"><%= truncate(episode.description, length: 150) %></p>
                                </div><!--END .episode_overview-->
                            </li>
-                             <li class="cf">
-                               <div class="episode_thumbnail">
-                                   <a href="episode.html">
-                                       <img src="images/danuska.jpg" alt="Danuska">
-                                   </a>
-                               </div><!--END .episode_thumbnail-->
-                               <div class="episode_overview">
-                                   <h2><a href="episode.html">How  to Pull off 12 Startups in 12 Months</a></h2>
-                                   <p class="desc">
-                                       Gentrify mustache photo booth, pabst PBR&B viral knausgaard venmo typewriter blog tumblr. 
-                                       Hammock helvetica forage, shabby chic vice gluten-free affogato disrupt wolf. 
-                                       Fashion axe hella fap locavore tilde. Distillery slow-carb you probably haven't heard of them 
-                                       raw denim. Cray skateboard mumblecore tofu. 8-bit flannel ramps retro vice. 
-                                       Twee yr dreamcatcher, flexitarian crucifix chambray intelligentsia.
-
-
-                                   </p>
-                               </div><!--END .episode_overview-->
-                           </li>
-                             <li class="cf">
-                               <div class="episode_thumbnail">
-                                   <a href="episode.html">
-                                       <img src="images/danuska.jpg" alt="Danuska">
-                                   </a>
-                               </div><!--END .episode_thumbnail-->
-                               <div class="episode_overview">
-                                   <h2><a href="episode.html">How  to Pull off 12 Startups in 12 Months</a></h2>
-                                   <p class="desc">
-                                       Gentrify mustache photo booth, pabst PBR&B viral knausgaard venmo typewriter blog tumblr. 
-                                       Hammock helvetica forage, shabby chic vice gluten-free affogato disrupt wolf. 
-                                       Fashion axe hella fap locavore tilde. Distillery slow-carb you probably haven't heard of them 
-                                       raw denim. Cray skateboard mumblecore tofu. 8-bit flannel ramps retro vice. 
-                                       Twee yr dreamcatcher, flexitarian crucifix chambray intelligentsia.
-                                   </p>
-                               </div><!--END .episode_overview-->
-                           </li>
+                           <% end %>
+                          
                        </ul>
                    </div><!--END .wrapper_skinny-->
                </div><!--END #episodes-->
