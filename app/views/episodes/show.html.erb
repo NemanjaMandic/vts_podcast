@@ -1,0 +1,102 @@
+  <div id="podcast_show">
+               <div id="show_banner">
+                   <div class="wrapper_skinny">
+                        <h1><%= @podcast.title %></h1>
+                           <p class="description"><%= @podcast.description %></p>
+                           <% unless @podcast.itunes.blank? %>
+                               <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+                           <% end %>
+                           <% unless @podcast.stitcher.blank? %>
+                               <a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+                            <% end %>
+                            <% unless @podcast.podbay.blank? %>
+                                <a href="<%= @podcast.podbay %>" class="subscribe_link">PodBay</a>
+                            <% end %>
+                   </div><!--END .wrapper_skinny-->
+                  
+               </div><!--END #show_banner-->
+               
+               <div id="breadcrumb">
+               <%= link_to podcasts_path do %>
+               		 All Podcasts
+                       <span>/</span>
+                       <%= link_to @podcast.title, podcasts_path(@podcast) %>
+                       <span>/</span> 
+                       <%= @episode.title %>
+               <% end %>
+               </div><!--END #breadcrumb-->
+                <div id="episode_content">
+                   <div class="wrapper_skinny">
+                        <img src="images/damir.jpg" alt="Damir" class="current_episode_thumbnail">
+                         <h2><%= @episode.title %></h2>
+                           <p class="desc"><%= @episode.description %></p>
+                   </div><!--END .wrapper_skinny-->
+               </div><!--END #episode_content-->
+               <div id="episodes">
+                   <div class="wrapper_skinny">
+                       <ul class="cf">
+                           <li class="cf">
+                               <div class="episode_thumbnail">
+                                   <a href="episode.html">
+                                       <img src="images/danuska.jpg" alt="Danuska">
+                                   </a>
+                               </div><!--END .episode_thumbnail-->
+                               <div class="episode_overview">
+                                   <h2><a href="episode.html">How  to Pull off 12 Startups in 12 Months</a></h2>
+                                   <p class="desc">
+                                       Gentrify mustache photo booth, pabst PBR&B viral knausgaard venmo typewriter blog tumblr. 
+                                       Hammock helvetica forage, shabby chic vice gluten-free affogato disrupt wolf. 
+                                       Fashion axe hella fap locavore tilde. Distillery slow-carb you probably haven't heard of them 
+                                       raw denim. Cray skateboard mumblecore tofu. 8-bit flannel ramps retro vice. 
+                                       Twee yr dreamcatcher, flexitarian crucifix chambray intelligentsia.
+
+
+                                   </p>
+                               </div><!--END .episode_overview-->
+                           </li>
+                             <li class="cf">
+                               <div class="episode_thumbnail">
+                                   <a href="episode.html">
+                                       <img src="images/danuska.jpg" alt="Danuska">
+                                   </a>
+                               </div><!--END .episode_thumbnail-->
+                               <div class="episode_overview">
+                                   <h2><a href="episode.html">How  to Pull off 12 Startups in 12 Months</a></h2>
+                                   <p class="desc">
+                                       Gentrify mustache photo booth, pabst PBR&B viral knausgaard venmo typewriter blog tumblr. 
+                                       Hammock helvetica forage, shabby chic vice gluten-free affogato disrupt wolf. 
+                                       Fashion axe hella fap locavore tilde. Distillery slow-carb you probably haven't heard of them 
+                                       raw denim. Cray skateboard mumblecore tofu. 8-bit flannel ramps retro vice. 
+                                       Twee yr dreamcatcher, flexitarian crucifix chambray intelligentsia.
+
+
+                                   </p>
+                               </div><!--END .episode_overview-->
+                           </li>
+                             <li class="cf">
+                               <div class="episode_thumbnail">
+                                   <a href="episode.html">
+                                       <img src="images/danuska.jpg" alt="Danuska">
+                                   </a>
+                               </div><!--END .episode_thumbnail-->
+                               <div class="episode_overview">
+                                   <h2><a href="episode.html">How  to Pull off 12 Startups in 12 Months</a></h2>
+                                   <p class="desc">
+                                       Gentrify mustache photo booth, pabst PBR&B viral knausgaard venmo typewriter blog tumblr. 
+                                       Hammock helvetica forage, shabby chic vice gluten-free affogato disrupt wolf. 
+                                       Fashion axe hella fap locavore tilde. Distillery slow-carb you probably haven't heard of them 
+                                       raw denim. Cray skateboard mumblecore tofu. 8-bit flannel ramps retro vice. 
+                                       Twee yr dreamcatcher, flexitarian crucifix chambray intelligentsia.
+                                   </p>
+                               </div><!--END .episode_overview-->
+                           </li>
+                       </ul>
+                   </div><!--END .wrapper_skinny-->
+               </div><!--END #episodes-->
+                <div class="pagination">
+                    <span class="previous_page disabled">Prethodna</span>
+                    <em class="current">1</em>
+                    <a href="#">2</a>
+                    <a class="next_page" href="#">Sledeća</a>
+            </div><!--END .pagination-->
+           </div><!--END #podcast_show-->

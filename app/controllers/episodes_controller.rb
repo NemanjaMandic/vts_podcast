@@ -9,12 +9,15 @@ class EpisodesController < ApplicationController
 	def create
 		@episode = @podcast.episodes.new(episode_params)
 		if @episode.save
-			redirect_to podcast_episode_path(@podcast)
+			redirect_to podcast_episode_path(@podcast, @episode)
 		else
 			render 'new'
 		end
 	end
-
+    
+    def show
+    end
+    
 	private
 
 	def episode_params
@@ -22,7 +25,7 @@ class EpisodesController < ApplicationController
 	end
 
 	def find_podcast
-	  	@podcast = Podcast.find(params[:id])
+	  	@podcast = Podcast.find(params[:podcast_id])
 	end
 
 	def find_episode
