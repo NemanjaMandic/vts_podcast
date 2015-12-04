@@ -16,7 +16,7 @@ class EpisodesController < ApplicationController
 	end
     
     def show
-    	@episodes = Episode.where(podcast_id: @podcast).order("created_at DESC")
+    	@episodes = Episode.where(podcast_id: @podcast).order("created_at DESC").reject { |e| e.id == @episode.id}
     end
     
 	private
