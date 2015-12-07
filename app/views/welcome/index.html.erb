@@ -1,19 +1,14 @@
   <div id="background">
-          
+        
             <header class="cf">
                 <div class="wrapper_wide">
                       <a id="logo" href="#">Edu Wall</a>
                 <nav>
                     <ul>
-                    <% unless podcast_signed_in? %>
-                        <li><%= link_to "Explore", podcasts_path %></li>
+                     <li><%= link_to "Explore", podcasts_path %></li>
                         <li><%= link_to "Uloguj se", new_podcast_session_path %></li>
                         <li><%= link_to "Create Podcast", new_podcast_registration_path %></li>
-                    <% else %>
-                         <li><a href="#">Dashboard</a></li>
-                         <li> <%= link_to "Explore", podcasts_path %></li>
-                         <li><%= link_to "Odjavi Se", destroy_podcast_session_path, method: :delete %></li>
-                    <% end %>
+                  
                     </ul>
                 </nav>
               </div><!--END .wrapper_wide -->

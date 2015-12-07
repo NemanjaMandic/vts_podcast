@@ -29,6 +29,11 @@ class EpisodesController < ApplicationController
     	end
     end
 
+    def destroy
+    	@episode.destroy
+    	redirect_to root_path
+    end
+
 	private
 
 	def episode_params
