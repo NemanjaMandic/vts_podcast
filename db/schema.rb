@@ -11,14 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151207184353) do
+ActiveRecord::Schema.define(version: 20151208224233) do
 
   create_table "episodes", force: :cascade do |t|
     t.string   "title"
     t.text     "description"
     t.integer  "podcast_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.string   "episode_thumbnail_file_name"
+    t.string   "episode_thumbnail_content_type"
+    t.integer  "episode_thumbnail_file_size"
+    t.datetime "episode_thumbnail_updated_at"
   end
 
   add_index "episodes", ["podcast_id"], name: "index_episodes_on_podcast_id"

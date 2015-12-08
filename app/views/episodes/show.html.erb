@@ -27,6 +27,7 @@
                </div><!--END #breadcrumb-->
                 <div id="episode_content">
                    <div class="wrapper_skinny">
+                    <%= image_tag @episode.episode_thumbnail.url(:medium), class: "current_episode_thumbnail" %>
                         <img src="images/damir.jpg" alt="Damir" class="current_episode_thumbnail">
                          <h2><%= @episode.title %></h2>
                            <p class="desc"><%= @episode.description %></p>
