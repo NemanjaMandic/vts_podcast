@@ -3,7 +3,7 @@
             </div><!--END #banner -->
             <div id="podcasts" class="cf">
                 <div class="wrapper">
-                    <ul>
+                    <ul class="cf">
                     <% @podcasts.each do |podcast| %>
                        <%= link_to podcast do %>
                         <li>
@@ -18,6 +18,8 @@
                      <% end %>  
                        
                     </ul>
+
+                    <%= will_paginate @podcasts %>
                 </div><!--END .wrapper-->
             </div><!--END #podcasts-->
             

@@ -46,10 +46,5 @@
                        </ul>
                    </div><!--END .wrapper_skinny-->
                </div><!--END #episodes-->
-                <div class="pagination">
-                    <span class="previous_page disabled">Prethodna</span>
-                    <em class="current">1</em>
-                    <a href="#">2</a>
-                    <a class="next_page" href="#">Sledeća</a>
-            </div><!--END .pagination-->
+                 <%= will_paginate @episodes %>
            </div><!--END #podcast_show-->
